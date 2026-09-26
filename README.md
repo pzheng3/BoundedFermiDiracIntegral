@@ -1,109 +1,62 @@
 # Bounded Fermi–Dirac Integral: Computational Supplement
 
-This repository contains the Python source code and Jupyter notebooks supporting the numerical experiments, validation calculations, and figures in the accompanying research article on bounded Fermi–Dirac integrals.
+Computational materials for Paul Zheng's research article on bounded Fermi–Dirac integrals. This repository contains Python source code, a Jupyter notebook, numerical output tables, and figure files. The article remains the source for mathematical definitions, hypotheses, proofs, and interpretation of the results.
 
-## Contents
+## Repository contents
 
-| Path | Description |
-|---|---|
-| `src/` | Core Python implementations of the bounded Fermi–Dirac integral and related formulas |
-| `scripts/` | Scripts used to reproduce numerical experiments and manuscript figures |
-| `notebooks/` | Jupyter notebooks for interactive exploration and validation |
-| `figures/` | Reproduced figures and figure-generation outputs, if included |
-| `requirements.txt` | Python package dependencies |
+| Path | Contents |
+| --- | --- |
+| `bounded_fermi_corrected.py` | Main Python source file for the computational supplement. |
+| `bounded_fermi_corrected.ipynb` | Jupyter notebook associated with the computations. |
+| `manuscript_figures.py` | Python source file for manuscript figures. |
+| `requirements.txt` | Python dependencies listed for this supplement. |
+| `data/` | CSV outputs and `manifest.json`. |
+| `figures/` | Figure files supplied as PDF, PNG, and SVG. |
+| `standalone_execution.log` | Saved execution log. |
 
-## Requirements
+File names identify the supplied materials; consult the source files for the exact computations, command-line options, and generated outputs. The `data/` and `figures/` directories contain existing results, so readers can inspect them without first rerunning the notebook.
 
-Tested with:
+## Setup
 
-- Python `[VERSION]`
-- NumPy `[VERSION]`
-- SciPy `[VERSION]`
-- Matplotlib `[VERSION]`
-- mpmath `[VERSION]`
-- JupyterLab or Jupyter Notebook, if running the notebooks
+Clone the repository and enter its root directory:
 
-## Installation
-
-Clone the repository:
-
-```bash
-git clone [https://github.com/pzheng3/BoundedFermiDiracIntegral.git](https://github.com/pzheng3/BoundedFermiDiracIntegral.git)
+```powershell
+git clone https://github.com/pzheng3/BoundedFermiDiracIntegral.git
 cd BoundedFermiDiracIntegral
 ```
 
-Create and activate a virtual environment.
-
-Windows PowerShell:
+On Windows PowerShell, create a virtual environment and install the listed dependencies:
 
 ```powershell
 python -m venv .venv
-.\.venv\Scripts\Activate.ps1
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
 ```
 
-macOS or Linux:
+If you use a different operating system, create and activate a Python virtual environment with your system's Python interpreter, then install `requirements.txt`. The exact Python and package versions used for the supplied outputs should be recorded separately if strict reproduction is required.
 
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-```
+## Running the materials
 
-Install the dependencies:
+Open `bounded_fermi_corrected.ipynb` with a Jupyter-compatible application to inspect or rerun its cells. Run cells from top to bottom using an environment with the required dependencies installed. The repository also provides `bounded_fermi_corrected.py` and `manuscript_figures.py` as standalone source files. Before executing them, inspect their main blocks and output paths: this README does not assume that running a file without arguments will regenerate every supplied result or that it is safe to overwrite existing outputs.
 
-```bash
-python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
-```
+The saved `standalone_execution.log` and `data/manifest.json` may help identify how the included outputs were produced. Exact figure-to-command mappings and validated reproduction times have not yet been specified here.
 
-## Reproducing the computations
+## Selected results
 
-Run the scripts from the repository root.
+| Topic | Included files |
+| --- | --- |
+| Forward evaluation | `data/forward_grid.csv`; `figures/1_Forward_Selvaggi_Fits.pdf`; `figures/2_Forward_Poisson_Fits.pdf` |
+| Inverse evaluation | `data/inverse_grid.csv`; `figures/5_Inverse_Selvaggi_Fits.pdf`; `figures/8_Inverse_Poisson_Error.pdf` |
+| Poisson endpoint checks | `data/poisson_endpoint_comparison.csv`; `data/poisson_endpoint_grid.csv`; `data/poisson_precision_audit.csv` |
+| Generalized orders | `data/hurwitz_orders.csv`; `data/hurwitz_inverse_orders.csv`; `figures/17_Hurwitz_Generalized_Orders.pdf` |
 
-```bash
-python scripts/[SCRIPT_NAME].py
-```
+These examples describe the existing file collection; they do not assert that every illustrated figure appears in the final article. The `figures/` directory contains additional versions and diagnostic plots, including PNG and SVG counterparts.
 
-For example, replace `[SCRIPT_NAME].py` with the actual program that produces the forward evaluation, inverse calculation, or Poisson-trace comparison reported in the article.
+## Reproducibility and citation
 
-To open the notebooks:
+For a publication, cite a fixed software release rather than relying only on the evolving default branch. Once the paper-associated version has been tested, create a GitHub release, archive it, and add its version-specific DOI and the final article citation here.
 
-```bash
-jupyter notebook
-```
+Article citation: To be added after publication or preprint posting.
 
-Then open the relevant file in `notebooks/`.
+Archived software release and DOI: To be added after release.
 
-## Reproducibility notes
-
-- The scripts use the numerical parameters, tolerances, and truncation rules stated in the accompanying article.
-- If a computation uses arbitrary-precision arithmetic, set the precision as documented in the corresponding script or notebook.
-- Reproduction time depends on the selected parameter ranges and numerical precision.
-- The repository version associated with the submitted article will be preserved as a tagged release and archived with a DOI.
-
-## Associated article
-
-[Author name(s)], “[Article title],” [Journal name], [year].
-
-Preprint or article link: `[URL]`
-
-Software archive DOI: `[DOI after Zenodo archival]`
-
-## Citation
-
-If you use this code, please cite the associated article and the archived software release:
-
-```text
-[Author name(s)]. Bounded Fermi–Dirac Integral: Computational Supplement.
-Version [VERSION]. Zenodo. [DOI].
-```
-
-## License
-
-This code is distributed under the `[LICENSE NAME]` license. See `LICENSE` for details.
-
-## Contact
-
-For questions about the computational supplement, please contact:
-
-Paul Zheng  
-[EMAIL ADDRESS]
+License: Check the repository for a `LICENSE` file. No license is asserted by this README.
