@@ -1,0 +1,115 @@
+{
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "matplotlib": "3.10.8",
+    "mpmath": "1.4.1"
+  },
+  "tolerances": {
+    "quad_epsabs": 1e-12,
+    "quad_epsrel": 1e-12,
+    "brent_xtol": 1e-12,
+    "brent_rtol": 8.881784197001252e-16
+  },
+  "normalizations": {
+    "bounded": "unnormalized",
+    "Hurwitz": "normalized complete analytic continuation"
+  },
+  "poisson_summation": "Binomial mean of S_L through S_2L; N=2L Fourier modes",
+  "grids": {
+    "forward_points": 201,
+    "inverse_points": 82,
+    "general_order_cases": 210
+  },
+  "original_failure_comparison": [
+    {
+      "N": 10,
+      "selvaggi_error": 0.004538209739825438,
+      "old_poisson_error": 8.349315006039859e-07,
+      "old_inverse": null,
+      "old_inverse_finite": false,
+      "new_inverse": 0.9999927362876743,
+      "new_inverse_error": 7.263712325733529e-06
+    },
+    {
+      "N": 30,
+      "selvaggi_error": 0.0005374938957891651,
+      "old_poisson_error": 1.1356893203640084e-10,
+      "old_inverse": null,
+      "old_inverse_finite": false,
+      "new_inverse": 0.9999999999999893,
+      "new_inverse_error": 1.0658141036401503e-14
+    },
+    {
+      "N": 50,
+      "selvaggi_error": 0.00019605939985423149,
+      "old_poisson_error": 1.9402257578349236e-12,
+      "old_inverse": null,
+      "old_inverse_finite": false,
+      "new_inverse": 0.9999999999999882,
+      "new_inverse_error": 1.176836406102666e-14
+    },
+    {
+      "N": 100,
+      "selvaggi_error": 4.9503728195343655e-05,
+      "old_poisson_error": 7.105427357601002e-15,
+      "old_inverse": 1.0,
+      "old_inverse_finite": true,
+      "new_inverse": 1.000000000000005,
+      "new_inverse_error": 5.10702591327572e-15
+    }
+  ],
+  "error_summary": [
+    {
+      "N": 10,
+      "max_forward_selvaggi": 0.013294470276858816,
+      "max_forward_poisson": 7.981117992827969e-06,
+      "max_inverse_selvaggi": 0.009099546741619169,
+      "max_inverse_poisson": 0.00012400995659511693
+    },
+    {
+      "N": 30,
+      "max_forward_selvaggi": 0.0018191293786210538,
+      "max_forward_poisson": 5.666578317686799e-13,
+      "max_inverse_selvaggi": 0.0010634869460925955,
+      "max_inverse_poisson": 4.3165471197426086e-13
+    },
+    {
+      "N": 50,
+      "max_forward_selvaggi": 0.0006434833858874889,
+      "max_forward_poisson": 7.585043704239069e-13,
+      "max_inverse_selvaggi": 0.0003876228029452422,
+      "max_inverse_poisson": 6.075140390748857e-13
+    },
+    {
+      "N": 100,
+      "max_forward_selvaggi": 0.00015783566571703211,
+      "max_forward_poisson": 2.488675931999751e-12,
+      "max_inverse_selvaggi": 9.784238271881573e-05,
+      "max_inverse_poisson": 1.0436096431476471e-12
+    }
+  ],
+  "figures": [
+    "1_Forward_Selvaggi_Fits",
+    "3_Forward_Selvaggi_Ratio",
+    "5_Inverse_Selvaggi_Fits",
+    "7_Inverse_Selvaggi_Error",
+    "9_Inverse_Selvaggi_Ratio",
+    "11_Forward_Selvaggi_Error",
+    "2_Forward_Poisson_Fits",
+    "4_Forward_Poisson_Ratio",
+    "6_Inverse_Poisson_Fits",
+    "8_Inverse_Poisson_Error",
+    "10_Inverse_Poisson_Ratio",
+    "12_Forward_Poisson_Error",
+    "13_Bell_Analytic_Inverse_Error",
+    "14_Sommerfeld_Analytic_Inverse_Error",
+    "15_Poisson_Endpoint_Repair_N10",
+    "16_Selvaggi_Raw_Convergence",
+    "17_Hurwitz_Generalized_Orders",
+    "18_Hurwitz_Generalized_Orders_Log",
+    "19_Hurwitz_Generalized_Inverse",
+    "20_Hurwitz_Generalized_Inverse_Log"
+  ]
+}

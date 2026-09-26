@@ -1,0 +1,51 @@
+{
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "matplotlib": "3.10.8",
+  "mpmath": "1.4.1"
+}
+Quadrature epsabs=epsrel=1e-12; Brent xtol=1e-12, rtol=8.8817841970012523e-16
+mu=1 | c=0.5 | a=10 | T=1 | reference_80dps=1.3959663933366890538549334943102919061827314476907157261202610724821099216460333 | double_error=1.625849e-17
+mu=0.1 | c=0.5 | a=10 | T=1 | reference_80dps=0.73323688852669844396650648311885528012848432633705245417527508540307668900717301 | double_error=1.1680448e-16
+mu=9.5 | c=0.5 | a=10 | T=1 | reference_80dps=18.210861675487061240379558622614163153098638470625404751869244676479014208061844 | double_error=1.6548586e-15
+mu=1 | c=-0.75 | a=10 | T=1 | reference_80dps=3.1874291989969384504629129851620993820955965902107007108349848411605109001427322 | double_error=1.2171559e-16
+mu=1 | c=0 | a=10 | T=1 | reference_80dps=1.3131382853284995752326453562178120036642674548614529104397710951254046279132169 | double_error=1.6467904e-16
+General-order / endpoint cases: 210
+Maximum Poisson scaled error: 1.0384015532075052e-13
+The finite grid supports this implementation; it does not prove all-parameter floating-point accuracy.
+N=10 | selvaggi_error=0.0045382097 | old_poisson_error=8.349315e-07 | old_inverse=nan | old_inverse_finite=False | new_inverse=0.99999274 | new_inverse_error=7.2637123e-06
+N=30 | selvaggi_error=0.0005374939 | old_poisson_error=1.1356893e-10 | old_inverse=nan | old_inverse_finite=False | new_inverse=1 | new_inverse_error=1.0658141e-14
+N=50 | selvaggi_error=0.0001960594 | old_poisson_error=1.9402258e-12 | old_inverse=nan | old_inverse_finite=False | new_inverse=1 | new_inverse_error=1.1768364e-14
+N=100 | selvaggi_error=4.9503728e-05 | old_poisson_error=7.1054274e-15 | old_inverse=1 | old_inverse_finite=True | new_inverse=1 | new_inverse_error=5.1070259e-15
+mu=0.1 | N=10 | old_error=0.084464559 | new_error=6.9385191e-06
+mu=1 | N=10 | old_error=8.349315e-07 | new_error=6.6084648e-06
+mu=9.5 | N=10 | old_error=0.054388343 | new_error=0.00021005502
+All four corrected Poisson inverses returned finite roots; their truncation errors are listed above.
+Additional all-real bracketing checks passed: 28
+N=10 | max_forward_selvaggi=0.01329447 | max_forward_poisson=7.981118e-06 | max_inverse_selvaggi=0.0090995467 | max_inverse_poisson=0.00012400996
+N=30 | max_forward_selvaggi=0.0018191294 | max_forward_poisson=5.6665783e-13 | max_inverse_selvaggi=0.0010634869 | max_inverse_poisson=4.3165471e-13
+N=50 | max_forward_selvaggi=0.00064348339 | max_forward_poisson=7.5850437e-13 | max_inverse_selvaggi=0.0003876228 | max_inverse_poisson=6.0751404e-13
+N=100 | max_forward_selvaggi=0.00015783567 | max_forward_poisson=2.4886759e-12 | max_inverse_selvaggi=9.7842383e-05 | max_inverse_poisson=1.0436096e-12
+Exact floating-point zeros omitted from log plot: 1 N= 30
+Exact floating-point zeros omitted from log plot: 1 N= 50
+c=-0.75 | composition_error=1.110223e-16
+c=0 | composition_error=3.469447e-18
+c=0.5 | composition_error=3.0357661e-18
+c=1.5 | composition_error=4.3368087e-19
+T=1 | K=1 | true_mu=8 | inverse=8.0026643 | error=0.0026643324 | iterations=4
+T=1 | K=2 | true_mu=8 | inverse=8.0003767 | error=0.00037667379 | iterations=4
+T=1 | K=3 | true_mu=8 | inverse=8.0001146 | error=0.00011459745 | iterations=4
+T=0.5 | K=1 | true_mu=8 | inverse=8.000152 | error=0.00015196815 | iterations=3
+T=0.5 | K=2 | true_mu=8 | inverse=8.0000048 | error=4.7609161e-06 | iterations=3
+T=0.5 | K=3 | true_mu=8 | inverse=8.0000005 | error=4.6211597e-07 | iterations=3
+T=0.25 | K=1 | true_mu=8 | inverse=8.0000093 | error=9.3367839e-06 | iterations=2
+T=0.25 | K=2 | true_mu=8 | inverse=8.0000001 | error=6.9491771e-08 | iterations=2
+T=0.25 | K=3 | true_mu=8 | inverse=8 | error=1.507761e-09 | iterations=2
+T=0.125 | K=1 | true_mu=8 | inverse=8.0000006 | error=5.8132492e-07 | iterations=2
+T=0.125 | K=2 | true_mu=8 | inverse=8 | error=1.0711609e-09 | iterations=2
+T=0.125 | K=3 | true_mu=8 | inverse=8 | error=5.7056582e-12 | iterations=2
+35 Hurwitz/polylogarithm and integral/derivative checks passed at 60 digits.
+Largest absolute cross-check difference: 1.9913648889155653e-59
+PASS: all executed assertions; 20 PDF, 20 SVG and 20 PNG figures; CSV data and manifest saved.
+See data/error_summary.csv for the numerical section. No 1e-15 accuracy promise is inferred from solver settings.
