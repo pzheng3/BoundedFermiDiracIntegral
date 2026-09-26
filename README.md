@@ -101,4 +101,5 @@ Hurwitz continuation, and separate numerical and analytical inverse tests. The
 notebook, Python export, CSV files, and manuscript therefore use the same
 definitions and numerical conventions.
 #   B o u n d e d F e r m i D i r a c I n t e g r a l  
+ #   B o u n d e d F e r m i D i r a c I n t e g r a l  
  
